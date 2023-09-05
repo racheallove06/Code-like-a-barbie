@@ -1,4 +1,23 @@
+:root {
+  --primary-color: #c94d7d;
+  --secondry-color: #ff48ee;
+  --extra-color: #e63a8d;
+  --primary-gradient: linear-gradient(
+    114.2deg,
+    rgb(121, 194, 243) 22.6%,
+    rgb(255, 180, 239) 67.7%
+  );
+}
+
 body {
   font-family: "Arima", cursive;
   font-family: "Charm", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  width: 100%;
 }

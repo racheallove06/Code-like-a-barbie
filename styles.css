@@ -29,16 +29,11 @@ body {
   left: 0;
   width: 100%;
   padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hero {
-  background-image: url("pic2.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 200px 20px;
-}
-
-section {
-  position: relative;
-  width: 100%;
+.logo {
+  width: 100px;
 }

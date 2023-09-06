@@ -11,12 +11,24 @@
   --secondary-font: "Charm", cursive;
 }
 
-body {
-  font-family: var(--secondary-font);
-  font-family: var(--primary-font);
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--secondary-font);
+  font-family: var(--primary-font);
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.hero {
+  background-image: url("pic2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 200px 20px;
 }
 
 section {

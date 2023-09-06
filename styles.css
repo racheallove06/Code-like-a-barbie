@@ -55,9 +55,19 @@ body {
   padding: 6px 15px;
   color: white;
 }
-.hover {
+.hover,
+active {
   border-radius: 20px;
 }
 .hover:hover {
   background: #ff48ee;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

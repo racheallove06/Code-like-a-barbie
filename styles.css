@@ -55,11 +55,14 @@ body {
   padding: 6px 15px;
   color: white;
 }
-.hover,
-active {
+.hover {
   border-radius: 20px;
 }
 .hover:hover {
+  background: #ff48ee;
+}
+
+.active {
   background: #ff48ee;
 }
 

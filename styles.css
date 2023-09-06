@@ -71,3 +71,21 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+section #text {
+  position: absolute;
+  font-size: 10vh;
+  text-align: center;
+  font-family: "Arima", cursive;
+  font-family: "Charm", cursive;
+  font-family: "Rancho", cursive;
+  line-height: 0.55em;
+}
+
+section #text span {
+  font-size: 0.2em;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
+}

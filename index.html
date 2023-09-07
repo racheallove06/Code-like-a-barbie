@@ -28,15 +28,15 @@
   <body>
     <header id="header">
       <ul>
-        <li class="hover active"><a href="#">Movies</a></li>
-        <li class="hover"><a href="#">Actors</a></li>
-        <li class="hover"><a href="#">History</a></li>
+        <li class="hover active me-5"><a href="#">Movies</a></li>
+        <li class="hover me-5"><a href="#">Actors</a></li>
+        <li class="hover me-5"><a href="#">History</a></li>
         <li>
-          <a href="#"> <img src="Logo_barbie.png" class="logo" /></a>
+          <a href="#"> <img src="/images/Barbie Logo.png" class="logo" /></a>
         </li>
-        <li class="hover"><a href="#">Videos</a></li>
-        <li class="hover"><a href="#">Synopsis</a></li>
-        <li class="hover"><a href="#">Gallery</a></li>
+        <li class="hover me-5"><a href="#">Videos</a></li>
+        <li class="hover me-5"><a href="#">Synopsis</a></li>
+        <li class="hover me-5"><a href="#">Gallery</a></li>
       </ul>
     </header>
     <section>
@@ -44,41 +44,32 @@
         <span>Code like a </span><br />
         Barbie
       </h2>
-      <img src="images/img2.png" id="bird1" />
+      <img src="" id="bird1" />
       <!--add the images here-->
-      <img src="images/thumb1.png" id="bird2" />
+      <img src="" id="bird2" />
       <img src="" id="forest" />
       <a href="#" id="btn">DreamBarbie</a>
       <img src="" id="rocks" />
       <img src="" id="water" />
     </section>
-    <div class="sec">
-      <h2>Lets go Barbie lets go party</h2>
-      <p>
-        "Barbie: The Movie" is a monumental cinematic extravaganza that
-        transports audiences into a mesmerizing universe filled with wonder and
-        excitement, offering a profound exploration of the beloved Barbie doll's
-        iconic legacy. This epic film, in its sweeping grandeur, takes us on an
-        exhilarating odyssey through the boundless landscapes of Barbie's
-        imagination, transcending the realms of conventional storytelling. With
-        each frame meticulously crafted, the visual splendor of "Barbie: The
-        Movie" is nothing short of breathtaking, immersing viewers in a
-        kaleidoscope of colors, textures, and designs that evoke pure
-        enchantment. From the very outset, the movie captivates its audience
-        with an awe-inspiring animation that blurs the line between reality and
-        fantasy, inviting viewers to suspend their disbelief and fully embrace
-        the magic that unfolds before their eyes. The story unfurls as a
-        tapestry of dreams and aspirations, with Barbie herself taking center
-        stage, showcasing her remarkable versatility as she embarks on a series
-        of awe-inspiring adventures. In every role she assumes, from a fearless
-        explorel but a symbol of limitless potential and unwavering spirit,
-        teaching us that we can be anything we want to be. This cinematic
-        masterpiece is an epic journey of self- witness their trials and
-        triumphs, we are reminded of the power of
-      </p>
+    <div class="sec-body">
+      <div class="sec">
+        <div class="dimages" style="--v: 1"><img src="only girls.png" /></div>
+        <div class="dimages" style="--v: 2"><img src="only girls.png" /></div>
+        <div class="dimages" style="--v: 3"><img src="only girls.png" /></div>
+        <div class="dimages" style="--v: 4"><img src="only girls.png" /></div>
+        <div class="dimages" class="3dimages" style="--v: 5">
+          <img src="only girls.png" />
+        </div>
+        <div class="dimages" style="--v: 6"><img src="only girls.png" /></div>
+        <div class="dimages" style="--v: 7"><img src="only girls.png" /></div>
+        <div class="dimages" style="--v: 8"><img src="only girls.png" /></div>
+      </div>
     </div>
 
     <script>
+      document.querySelector(".logo").classList.add("fadeIn");
+
       let text = document.getElementById("text");
       let bird1 = document.getElementById("bird1");
       let bird2 = document.getElementById("bird2");
@@ -88,6 +79,10 @@
       let water = document.getElementById("water");
       let header = document.getElementById("header");
 
+      // Set initial positions
+      bird1.style.left = "0"; // Initially on the left
+      bird2.style.left = "100%"; // Initially on the right
+
       window.addEventListener("scroll", function () {
         let value = window.scrollY;
 
@@ -95,7 +90,7 @@
         bird1.style.top = value * -1.5 + "px";
         bird1.style.left = value * 2 + "px";
         bird2.style.top = value * -1.5 + "px";
-        bird2.style.left = value * -5 + "px";
+        bird2.style.left = 100 - value * 2 + "px"; // Move bird2 to the left as you scroll
         btn.style.marginTop = value * 1.5 + "px";
         rocks.style.top = value * -0.12 + "px";
         forest.style.top = value * 0.25 + "px";

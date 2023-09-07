@@ -23,6 +23,11 @@
       href="https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300&family=Charm&family=Rancho&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
@@ -54,20 +59,44 @@
     </section>
     <div class="sec-body">
       <div class="sec">
-        <div class="dimages" style="--v: 1"><img src="only girls.png" /></div>
-        <div class="dimages" style="--v: 2"><img src="only girls.png" /></div>
-        <div class="dimages" style="--v: 3"><img src="only girls.png" /></div>
-        <div class="dimages" style="--v: 4"><img src="only girls.png" /></div>
-        <div class="dimages" class="3dimages" style="--v: 5">
+        <div class="dimages spin" style="--v: 1">
           <img src="only girls.png" />
         </div>
-        <div class="dimages" style="--v: 6"><img src="only girls.png" /></div>
-        <div class="dimages" style="--v: 7"><img src="only girls.png" /></div>
-        <div class="dimages" style="--v: 8"><img src="only girls.png" /></div>
+        <div class="dimages spin" style="--v: 2">
+          <img src="only girls.png" />
+        </div>
+        <div class="dimages spin" style="--v: 3">
+          <img src="only girls.png" />
+        </div>
+        <div class="dimages spin" style="--v: 4">
+          <img src="only girls.png" />
+        </div>
+        <div class="dimages spin" class="3dimages" style="--v: 5">
+          <img src="only girls.png" />
+        </div>
+        <div class="dimages spin" style="--v: 6">
+          <img src="only girls.png" />
+        </div>
+        <div class="dimages spin" style="--v: 7">
+          <img src="only girls.png" />
+        </div>
+        <div class="dimages spin" style="--v: 8">
+          <img src="only girls.png" />
+        </div>
       </div>
     </div>
 
     <script>
+      $(document).ready(function () {
+        $(".sec div ").click(function () {
+          if ($(this).hasClass("spin")) {
+            $(".box div").removeClass("spin");
+          } else {
+            $(".box div").removeClass("spin");
+            $(this).addClass("spin");
+          }
+        });
+      });
       document.querySelector(".logo").classList.add("fadeIn");
 
       let text = document.getElementById("text");

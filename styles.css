@@ -146,6 +146,8 @@ section #text span {
   padding: 0;
   box-sizing: border-box;
   width: 100px;
+  position: absolute;
+  object-fit: cover;
 }
 
 .sec-body {
@@ -162,15 +164,15 @@ section #text span {
   height: 300px;
   width: 200px;
   transform-style: preserve-3d;
-  animation: animate 20s linear infinite;
+  animation: animate 22s linear infinite;
 }
 
 @keyframes animate {
   0% {
     transform: perspective(1500px) rotateY(0deg);
   }
-  0% {
-    transform: perspective(1500px) rotateY(360deg); /* Normal size at the beginning and end */
+  100% {
+    transform: perspective(1500px) rotateY(-360deg); /* Normal size at the beginning and end */
   }
 }
 
@@ -183,4 +185,26 @@ section #text span {
   transform-style: preserve-3d;
   transform-origin: center;
   transform: rotateY(calc(var(--v) * 45deg)) translateZ(300px);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, black);
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: perspective(1500px) rotateY(0deg);
+    -webkit-box-reflect: below 0px
+      linear-gradient(transparent, transparent, black);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+    transform: perspective(1500px) rotateY(360deg);
+    /* Normal size at the beginning and end */
+    -webkit-box-reflect: below 0px
+      linear-gradient(transparent, transparent, black);
+  }
 }

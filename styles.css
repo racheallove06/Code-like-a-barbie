@@ -145,6 +145,7 @@ section #text span {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100px;
 }
 
 .sec-body {
@@ -154,4 +155,32 @@ section #text span {
   justify-content: center;
   min-height: 100vh;
   background: #ff48ee;
+}
+
+.sec {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1500px) rotateY(0deg);
+  }
+  0% {
+    transform: perspective(1500px) rotateY(360deg); /* Normal size at the beginning and end */
+  }
+}
+
+.sec div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transform: rotateY(calc(var(--v) * 45deg)) translateZ(300px);
 }

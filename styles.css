@@ -167,15 +167,6 @@ section #text span {
   animation: animate 22s linear infinite;
 }
 
-@keyframes animate {
-  0% {
-    transform: perspective(1500px) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(1500px) rotateY(-360deg); /* Normal size at the beginning and end */
-  }
-}
-
 .sec div {
   position: absolute;
   top: 0;
@@ -185,26 +176,28 @@ section #text span {
   transform-style: preserve-3d;
   transform-origin: center;
   transform: rotateY(calc(var(--v) * 45deg)) translateZ(300px);
-  -webkit-box-reflect: below 0px
-    linear-gradient(transparent, transparent, black);
 }
 
-.spin {
-  animation: spin 2s linear infinite;
+.images {
+  width: 350px;
 }
 
-@keyframes animate {
-  0% {
-    filter: hue-rotate(0deg);
-    transform: perspective(1500px) rotateY(0deg);
-    -webkit-box-reflect: below 0px
-      linear-gradient(transparent, transparent, black);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-    transform: perspective(1500px) rotateY(360deg);
-    /* Normal size at the beginning and end */
-    -webkit-box-reflect: below 0px
-      linear-gradient(transparent, transparent, black);
-  }
+.col-6 {
+  background-image: url(images/theone.jpeg);
+  background-size: contain; /* This will make the image cover the entire container */
+  background-repeat: no-repeat;
+}
+
+p {
+  font-size: 18px;
+  max-width: 400px;
+}
+.theone2 {
+  background-image: url(images/theone.jpeg);
+  background-size: contain; /* This will make the image cover the entire container */
+  background-repeat: no-repeat;
+}
+
+.zambia {
+  width: 550px;
 }

@@ -23,11 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300&family=Charm&family=Rancho&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
+
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
@@ -60,43 +56,113 @@
     <div class="sec-body">
       <div class="sec">
         <div class="dimages spin" style="--v: 1">
-          <img src="only girls.png" />
+          <img src="images/only girls.png" />
         </div>
         <div class="dimages spin" style="--v: 2">
-          <img src="only girls.png" />
+          <img src="images/theone2.jpeg girls.png" />
         </div>
         <div class="dimages spin" style="--v: 3">
-          <img src="only girls.png" />
+          <img src="images/only girls.png" />
         </div>
         <div class="dimages spin" style="--v: 4">
-          <img src="only girls.png" />
+          <img src="images/only girls.png" />
         </div>
         <div class="dimages spin" class="3dimages" style="--v: 5">
-          <img src="only girls.png" />
+          <img src="images/only girls.png" />
         </div>
         <div class="dimages spin" style="--v: 6">
-          <img src="only girls.png" />
+          <img src="images/only girls.png" />
         </div>
         <div class="dimages spin" style="--v: 7">
-          <img src="only girls.png" />
+          <img src="images/only girls.png" />
         </div>
         <div class="dimages spin" style="--v: 8">
-          <img src="only girls.png" />
+          <img src="images/only girls.png" />
         </div>
       </div>
     </div>
-
+    <div class="row">
+      <div class="col-6 mt-5">
+        <div class="content ms-5">
+          <h3 class="mt-5">What Barbie means to me</h3>
+          <p>
+            Barbie holds a special place in my heart as more than just a doll;
+            she represents a world of limitless possibilities and empowerment.
+            To me, Barbie is a symbol of resilience and ambition, breaking
+            through stereotypes and proving that girls can be anything they
+            aspire to be. She encourages creativity, fostering imaginative play
+            and storytelling that transcend generations. Barbie has taught me
+            about the importance of self-expression, diversity, and the value of
+            embracing individuality. Beyond her iconic fashion and glamorous
+            lifestyle, she serves as a reminder that dreams are achievable
+            through hard work and determination. Barbie is not just a toy; she's
+            an enduring source of inspiration and a testament to the incredible
+            potential within each of us.
+          </p>
+        </div>
+      </div>
+      <div class="col mt-5">
+        <div>
+          <img src="images/one.jpeg" class="images" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-5">
+        <div>
+          <img src="images/one.jpeg" class="images" />
+        </div>
+      </div>
+      <div class="col-6 theone2">
+        <div class="content ms-5 mt-5">
+          <h3 class="mt-5">My favourite Barbie</h3>
+          <p>
+            Barbie Fashionista #121." This Barbie is a true champion of
+            diversity and inclusivity, with her unique style and representation.
+            With her stunningly curly hair, radiant smile, and fashion-forward
+            outfits, she celebrates individuality and encourages
+            self-expression. Barbie Fashionista #121 teaches us that beauty
+            comes in all forms and that we should embrace our differences with
+            pride. She showcases a wide range of skin tones, body types, and
+            fashion choices, breaking traditional stereotypes and promoting a
+            more inclusive world. This Barbie reminds me that we should
+            celebrate our uniqueness and encourage others to do the same, making
+            her a wonderful ambassador for diversity and self-confidence.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 ms-5 mt-5">
+        <div class="content ms-5">
+          <h3>My Dream Barbie House</h3>
+          <p>
+            In my dream Barbie house, architectural innovation meets boundless
+            creativity. It's a modern marvel of design, featuring sleek lines,
+            expansive windows that bathe the interiors in natural light, and a
+            stunning rooftop garden. The house is a smart home, with
+            voice-activated commands to control lighting, temperature, and even
+            a personalized soundtrack. Each room is a masterpiece in itself: the
+            open-concept kitchen with state-of-the-art appliances, a minimalist
+            living room with modular furniture for endless rearrangement, and a
+            home office where Barbie can pursue her dreams and career
+            aspirations. The bedroom is a haven of tranquility, with a panoramic
+            view of the surrounding landscape and a walk-in closet that's a
+            fashionista's dream. The rooftop garden is a green oasis with a
+            sparkling infinity pool, a barbecue area for outdoor entertaining,
+            and a lush garden filled with exotic plants. My dream Barbie house
+            is a testament to contemporary elegance and functionality, where
+            Barbie can live a life of modern luxury and endless possibilities.
+          </p>
+        </div>
+      </div>
+      <div class="col mt-5">
+        <div>
+          <img src="images/Zambia.png" class="images border zambia" />
+        </div>
+      </div>
+    </div>
     <script>
-      $(document).ready(function () {
-        $(".sec div ").click(function () {
-          if ($(this).hasClass("spin")) {
-            $(".box div").removeClass("spin");
-          } else {
-            $(".box div").removeClass("spin");
-            $(this).addClass("spin");
-          }
-        });
-      });
       document.querySelector(".logo").classList.add("fadeIn");
 
       let text = document.getElementById("text");

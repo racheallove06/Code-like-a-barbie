@@ -155,7 +155,7 @@ section #text span {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: black;
+  background: #fe7ade;
 }
 
 .box {
@@ -231,4 +231,26 @@ h3 {
 
 .imagination {
   font-size: 90px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    background-size: contain;
+    overflow-x: hidden;
+    width: 600px;
+
+    background-image: url(images/12060.jpg);
+
+    background-repeat: no-repeat;
+  }
+
+  #header {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
 }

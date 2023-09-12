@@ -147,28 +147,40 @@ section #text span {
   padding: 0;
   box-sizing: border-box;
   width: 100px;
-  position: absolute;
-  object-fit: cover;
 }
 
-.sec-body {
+.section-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: rgb(15, 176, 255);
+  background: black;
 }
 
-.sec {
+.box {
   position: relative;
   height: 300px;
   width: 200px;
   transform-style: preserve-3d;
-  animation: animate 22s linear infinite;
+  animation: animate 22s linear infinite; /*h*/
 }
 
-.sec div {
+@keyframes animate {
+  0% {
+    transform: perspective(1500px) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(1500px) rotateY(360deg);
+  }
+
+  100% {
+    transform: perspective(1500px) rotateY(0);
+  }
+}
+
+.box div {
   position: absolute;
   top: 0;
   left: 0;
@@ -179,31 +191,34 @@ section #text span {
   transform: rotateY(calc(var(--v) * 45deg)) translateZ(300px);
 }
 
-.col-6 {
+.box div img {
+  position: absolute;
+
+  object-fit: cover;
+}
+
+.content {
   background-image: url(images/theone.jpeg);
-  background-size: contain; /* This will make the image cover the entire container */
+  background-size: contain;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  border: none;
 }
 
 p {
   font-size: 20px;
   max-width: 400px;
 }
-.theone2 {
-  background-image: url(images/theone.jpeg);
-  background-size: contain; /* This will make the image cover the entire container */
-  background-repeat: no-repeat;
-  border-radius: 10px;
-}
 
-.zambia {
+.dream-house {
   width: 550px;
+  margin-left: -36px;
 }
 
 .barbie-image {
-  width: 550px;
-  height: 640px;
+  width: 500px;
+  height: 590px;
+  margin-left: 20px;
+  border-radius: 10px;
 }
 
 h3 {

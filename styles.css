@@ -245,6 +245,14 @@ h3 {
   height: 510px;
 }
 
+.selena {
+  width: 550px;
+}
+
+.tingz {
+  width: 300px;
+}
+
 @media (max-width: 900px) {
   .hero {
     background-size: contain;

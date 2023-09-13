@@ -22,7 +22,7 @@
 body {
   overflow-x: hidden;
   min-height: 100vh;
-  background-image: url(images/12060.jpg);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/943/original/12060.jpg?1694617332);
   background-size: contain; /* This will make the image cover the entire container */
   background-repeat: no-repeat;
 }
@@ -146,7 +146,14 @@ section #text span {
   margin-top: 95px;
 }
 
-.row {
+.row-content {
+  background: #ffd8ed;
+}
+
+.d-flex {
+  /*background-image: url(images/Small\ Fresh\ .jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;*/
   background: #ffd8ed;
 }
 
@@ -211,7 +218,7 @@ section #text span {
 }
 
 .content {
-  background-image: url(images/theone.jpeg);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/944/original/theone.jpeg?1694617398);
   background-size: contain;
   background-repeat: no-repeat;
   border: none;

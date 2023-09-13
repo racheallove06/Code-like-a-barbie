@@ -154,7 +154,8 @@ section #text span {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100px;
+  width: 250px;
+  height: 250px;
 }
 
 .section-body {
@@ -172,6 +173,10 @@ section #text span {
   width: 200px;
   transform-style: preserve-3d;
   animation: animate 22s linear infinite; /*h*/
+}
+
+.stars {
+  width: 300px;
 }
 
 @keyframes animate {

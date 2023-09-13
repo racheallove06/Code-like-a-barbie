@@ -250,7 +250,12 @@ h3 {
 }
 
 .tingz {
-  width: 300px;
+  width: 560px;
+  height: 550px;
+}
+
+.margot {
+  width: 500px;
 }
 
 @media (max-width: 900px) {

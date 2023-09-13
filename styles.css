@@ -29,7 +29,7 @@ body {
 #header {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 30px;
   width: 100%;
   padding: 30px 100px;
   display: flex;
@@ -151,10 +151,20 @@ section #text span {
 }
 
 .d-flex {
-  /*background-image: url(images/Small\ Fresh\ .jpeg);
-  background-size: contain;
-  background-repeat: no-repeat;*/
-  background: #ffd8ed;
+  animation: colorChange 9s infinite;
+}
+
+@keyframes colorChange {
+  0%,
+  100% {
+    background-color: #ffd8ed; /* Color 1 */
+  }
+  33% {
+    background-color: #48c3fd; /* Color 2 */
+  }
+  66% {
+    background-color: #f56ac5; /* Color 3 */
+  }
 }
 
 .dimages {
@@ -171,7 +181,7 @@ section #text span {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /*color*/
+  background: #ffd8ed;
 }
 
 .box {
@@ -184,6 +194,27 @@ section #text span {
 
 .stars {
   width: 300px;
+  transition: transform 0.1s ease;
+}
+
+.cast {
+  text-align: center;
+  color: #e63a8d;
+  animation: moveInOut 2s ease-in-out infinite;
+}
+
+@keyframes moveInOut {
+  0%,
+  100% {
+    transform: scale(1); /* Normal size at the beginning and end */
+  }
+  50% {
+    transform: scale(1.2); /* Scale up at the middle of the animation */
+  }
+}
+
+.stars:hover {
+  transform: translateY(-10px);
 }
 
 @keyframes animate {
@@ -268,6 +299,11 @@ h3 {
 
 .margot {
   width: 500px;
+}
+
+.footer {
+  font-size: 24px;
+  text-align: center;
 }
 
 @media (max-width: 900px) {

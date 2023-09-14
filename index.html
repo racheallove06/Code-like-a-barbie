@@ -30,6 +30,361 @@
       src="https://kit.fontawesome.com/0b4f6cb46c.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      :root {
+        --primary-color: #c94d7d;
+        --secondry-color: #ff48ee;
+        --extra-color: #e63a8d;
+        --primary-gradient: linear-gradient(
+          114.2deg,
+          rgb(121, 194, 243) 22.6%,
+          rgb(255, 180, 239) 67.7%
+        );
+        --primary-font: "Arima", cursive;
+        --secondary-font: "Charm", cursive;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--secondary-font);
+        font-family: var(--primary-font);
+      }
+
+      body {
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+      #header {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        width: 100%;
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      .logo {
+        width: 100px;
+        animation: moveInOut 2s ease-in-out infinite;
+      }
+
+      @keyframes moveInOut {
+        0%,
+        100% {
+          transform: scale(1); /* Normal size at the beginning and end */
+        }
+        50% {
+          transform: scale(1.2); /* Scale up at the middle of the animation */
+        }
+      }
+
+      #header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+
+      #header ul li {
+        margin-left: 20px;
+      }
+
+      #header ul li a {
+        text-decoration: none;
+        padding: 20px;
+        color: black;
+      }
+      .hover {
+        border-radius: 20px;
+      }
+      .hover:hover {
+        background: #ff48ee;
+      }
+
+      .active {
+        background: #ff48ee;
+      }
+
+      section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        /* background: linear-gradient(to top, rgb(255, 72, 238), transparent);*/
+        z-index: 10;
+      }
+
+      section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        pointer-events: none;
+        width: 100%;
+      }
+
+      section #text {
+        position: absolute;
+        font-size: 10vh;
+        text-align: center;
+        font-family: "Arima", cursive;
+        font-family: "Charm", cursive;
+        font-family: "Rancho", cursive;
+        line-height: 0.55em;
+        transform: translateY(-50%);
+      }
+
+      section #text span {
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-family: var(--primary-font);
+        font-family: var(--secondary-font);
+      }
+
+      #btn {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 30px;
+        background: white;
+        color: black;
+        background: #11b3fe;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        border-radius: 40px;
+        transform: translateY(100px);
+      }
+
+      .first-row {
+        margin-top: 95px;
+      }
+
+      .row-content {
+        background: #ffd8ed;
+      }
+
+      @media (max-width: 1024px) {
+        .row-content {
+          background: none;
+        }
+      }
+
+      .d-flex {
+        animation: colorChange 9s infinite;
+      }
+
+      @keyframes colorChange {
+        0%,
+        100% {
+          background-color: #ffd8ed; /* Color 1 */
+        }
+        33% {
+          background-color: #48c3fd; /* Color 2 */
+        }
+        66% {
+          background-color: #f56ac5; /* Color 3 */
+        }
+      }
+
+      .dimages {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 250px;
+        height: 250px;
+      }
+
+      .section-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #ffd8ed;
+      }
+
+      @media (max-width: 1024px) {
+        .section-body {
+          background: none;
+        }
+      }
+
+      .box {
+        position: relative;
+        height: 300px;
+        width: 200px;
+        transform-style: preserve-3d;
+        animation: animate 22s linear infinite; /*h*/
+      }
+
+      .stars {
+        width: 300px;
+        transition: transform 0.1s ease;
+      }
+
+      .cast {
+        text-align: center;
+        color: #e63a8d;
+        animation: moveInOut 2s ease-in-out infinite;
+      }
+
+      @keyframes moveInOut {
+        0%,
+        100% {
+          transform: scale(1); /* Normal size at the beginning and end */
+        }
+        50% {
+          transform: scale(1.2); /* Scale up at the middle of the animation */
+        }
+      }
+
+      .stars:hover {
+        transform: translateY(-10px);
+      }
+
+      @keyframes animate {
+        0% {
+          transform: perspective(1500px) rotateY(0deg);
+        }
+
+        50% {
+          transform: perspective(1500px) rotateY(360deg);
+        }
+
+        100% {
+          transform: perspective(1500px) rotateY(0);
+        }
+      }
+
+      .box div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(calc(var(--v) * 45deg)) translateZ(300px);
+      }
+
+      .box div img {
+        position: absolute;
+
+        object-fit: cover;
+      }
+
+      .content {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/944/original/theone.jpeg?1694617398);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+      }
+
+      @media (max-width: 1024px) {
+        .content {
+          background-image: none;
+          background-color: white;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        max-width: 400px;
+      }
+
+      .barbie-image {
+        max-width: 500px;
+        min-width: 300px;
+        width: 100%;
+        min-height: 590px;
+        margin-left: 20px;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+
+      h3 {
+        font-family: "Arima", cursive;
+        font-family: "Charm", cursive;
+        font-family: "Rancho", cursive;
+
+        font-size: 50px;
+      }
+
+      .heading {
+        color: #e63a8d;
+      }
+
+      .imagination {
+        font-size: 90px;
+      }
+
+      .barbie-fashonista,
+      .selena,
+      .margot,
+      .tingz,
+      .dream-house {
+        max-width: 500px;
+        min-width: 300px;
+        width: 100%;
+        min-height: 590px;
+        object-fit: cover;
+      }
+
+      .footer {
+        font-size: 15px;
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        margin-top: 30px;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/967/original/%F0%9D%90%93%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A7_%F0%9D%90%91%F0%9D%90%A8%F0%9D%90%A6%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9C%F0%9D%90%9E___%F0%9D%9A%81%F0%9D%9A%8A%F0%9D%9A%97%F0%9D%9A%8B%F0%9D%9A%98%F0%9D%9A%98%E2%9C%93_-_C%CA%9C%E1%B4%80%E1%B4%98%E1%B4%9B%E1%B4%87%CA%80_%E1%B4%9B%E1%B4%A1%E1%B4%8F.gif?1694626984);
+        background-size: contain;
+        color: black;
+      }
+
+      .footer .name {
+        color: #11b3fe;
+      }
+      .fa-brands {
+        font-size: 40px;
+        color: black;
+      }
+
+      .hero {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/943/original/12060.jpg?1694617332);
+        background-size: cover;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+        padding: 160px 20px;
+      }
+
+      @media (max-width: 1024px) {
+        .nav-container li.hover {
+          display: none;
+        }
+
+        .content-wrapper {
+          width: 100% !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="hero">
@@ -122,10 +477,10 @@
       </div>
     </div>
     <div class="row row-content mt-5">
-      <div class="col-6 ms-5 mt-5 mb-5 content-wrapper">
+      <div class="col-6 mx-3 mt-5 mb-5 content-wrapper">
         <div class="content">
-          <h3 class="ms-5 heading">My Dream Barbie House</h3>
-          <p class="ms-5">
+          <h3 class="mx-3 heading">My Dream Barbie House</h3>
+          <p class="mx-3">
             In my dream Barbie house, I envision a place of boundless
             imagination and style. It's a cozy retreat where Barbie and her
             friends can embark on countless adventures. The living room is a
@@ -144,7 +499,7 @@
         <div>
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/903/original/From_Afghanistan_To_Zimbabwe__Here's_What_AI_Thinks_Barbie's_Dream_House_Would_Look_Like_Around_The_World.jpeg?1694615114"
-            class="images border dream-house me-3"
+            class="images border dream-house mx-3"
           />
         </div>
       </div>
@@ -154,14 +509,14 @@
         <div>
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/904/original/selena_%282%29.jpeg?1694615185"
-            class="selena ms-5"
+            class="selena mx-3"
           />
         </div>
       </div>
       <div class="col mt-5 mb-5 content-wrapper">
         <div class="content">
-          <h3 class="ms-5 heading">My favourite Barbie celebrity</h3>
-          <p class="ms-5">
+          <h3 class="mx-3 heading">My favourite Barbie celebrity</h3>
+          <p class="mx-3">
             Selena Gomez, my favorite Barbie celebrity, is a true icon in the
             world of entertainment. With her enchanting beauty and incredible
             talent, she has captured the hearts of millions worldwide. From her
@@ -179,9 +534,9 @@
 
     <div class="row row-content mt-5">
       <div class="col mt-5 mb-5 content-wrapper">
-        <div class="content ms-5">
-          <h3 class="ms-5 heading">Barbie Tingz</h3>
-          <p class="ms-5">
+        <div class="content mx-3">
+          <h3 class="mx-3 heading">Barbie Tingz</h3>
+          <p class="mx-3">
             Nicki Minaj is often compared to a real-life Barbie in the music
             industry. She's known for her vibrant style, catchy songs, and bold
             personality, which mirror the spirit of a Barbie doll. With
@@ -210,14 +565,14 @@
         <div>
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/908/original/maggot.png?1694615398"
-            class="margot ms-5"
+            class="margot mx-3"
           />
         </div>
       </div>
       <div class="col mt-5 mb-5">
         <div class="content me-5 content-wrapper">
-          <h3 class="ms-5 heading">Margot Robbie the Barbie star</h3>
-          <p class="ms-5">
+          <h3 class="mx-3 heading">Margot Robbie the Barbie star</h3>
+          <p class="mx-3">
             Robbie truly shines as the iconic Barbie in the 2023 film "Barbie."
             In this imaginative narrative, she flawlessly embodies Barbie, a
             symbol of conventional beauty who embarks on a profound
@@ -455,17 +810,14 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/933/origina
     </div>
     <div class="footer">
       <h3 class="mt-5">
-        Crafted with passion and lines of code by Racheal Muchiri 👩‍💻🌸❤
+        Crafted with passion and lines of code by
+        <span class="name">Racheal Muchiri 👩‍💻🌸❤</span>
       </h3>
       <a
         href="https://www.linkedin.com/in/racheal-muchiri-455665249"
         title="linkedin"
       >
         <i class="fa-brands fa-linkedin-in me-5"></i
-      ></a>
-
-      <a href="https://www.instagram.com/racheall.o.v.e">
-        <i class="fa-brands fa-instagram me-5"></i
       ></a>
     </div>
     <script>
